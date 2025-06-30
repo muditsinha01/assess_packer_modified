@@ -27,9 +27,17 @@ env:
   TERRAFORM_DOCS_REPO_BRANCH_NAME: improvement/support_atx_closed_markdown_headers
   TERRAFORM_DOCS_REPO_DEPTH: 1
   TERRAFORM_DOCS_REPO_URL: https://github.com/mcdonnnj/terraform-docs.git
-  AWS_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
-  AWS_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-  MONGO_URI: mongodb+srv://testuser:hub24aoeu@gg-is-awesome-gg273.mongodb.net/test?retryWrites=true&w=majority
+  # ── INTENTIONALLY LEAKED CANARY SECRETS (for scanner testing only) ──
+  AWS_ACCESS_KEY_ID: AKIA1A2B3C4D5E6F7G8H
+  AWS_SECRET_ACCESS_KEY: p9qRsT0uV1wX2yZa3Bc4De5Fg6Hi7Jk8Lm9NoPQr
+  MONGO_URI: >-
+    mongodb+srv://devuser:Sup3rS3cretP@demo-cluster.abcd.mongodb.net/
+    test?retryWrites=true&w=majority
+  RSA_PRIVATE_KEY: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpAIBAAKCAQEApGTXVB6k7n6gsA/L1dhGjN6JDcDB7…
+    …snip a few dozen base-64 lines…
+    -----END RSA PRIVATE KEY-----
 
 jobs:
   diagnostics:
